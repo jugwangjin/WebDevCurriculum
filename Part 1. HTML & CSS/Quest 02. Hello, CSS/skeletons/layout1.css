@@ -10,10 +10,18 @@ body {
 
 aside {
 	background-color: pink;
+	width: 200px;
+	position: absolute;
+	min-height: 1050px;
 	/* TODO: 이 곳을 채우세요! */
 }
 
 .main {
 	background-color: skyblue;
+	display: inline-block;
+	margin-left: 200px;
+	height: 100%;
+	min-height: 1050px;
+	/* 이 공간을 채우는 칸의 100%를 차지하게 만든거*/ 
 	/* TODO: 이 곳을 채우세요! */
 }

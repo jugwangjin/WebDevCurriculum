@@ -10,15 +10,29 @@ body {
 
 .main {
 	background-color: skyblue;
+	position: absolute;
+	margin-left: 200px;
+	margin-right: 300px;
+	min-height: 1000px;
+	height: 100%;
 	/* TODO: 이 곳을 채우세요! */
 }
 
 .left {
+	width: 200px;
+	position: absolute;
 	background-color: pink;
+	min-height: 1000px;
+	height: 100%;
 	/* TODO: 이 곳을 채우세요! */
 }
 
 .right {
+	width: 300px;
+	position: absolute;
+	right: 0px;
 	background-color: greenyellow;
+	min-height: 1000px;
+	height: 100%;
 	/* TODO: 이 곳을 채우세요! */
 }
