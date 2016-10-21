@@ -30,3 +30,28 @@ var printstars = function (num)
 
 
 printstars(prompt("별의 갯수를 입력하세요", 5));
+
+
+
+/*
+
+더좋은 예제
+
+var printStar = function(n) {
+   for(var i=0; i<n; i++) {
+      var string = "";
+      for(var j=0; j<2*n+1; j++) {
+         
+         if(n - i - 1 < j && j < n + i + 1)
+            string += "*";
+         else
+            string += " ";
+      }
+      console.log(string);
+   }
+}
+
+var num = prompt("별의 갯수를 입력하세요.", 5);
+printStar(parseInt(num));
+*/
+

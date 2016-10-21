@@ -33,11 +33,44 @@
 		</section>
 
 		<script>
+		var changebackground = function(){
+			if(this.style.backgroundColor=="yellow")
+			{
+				this.style.backgroundColor = "white";
+			}
+			else
+				this.style.backgroundColor="yellow";
+				// background-color는 CSS
+				// javascript에선 -를 못쓰니까 대문자로 구분
+
+		}
+
+
+		var squareswitch = function(){
+			for(var i=0; i<row2Squares.length; i++)
+			{
+				row2Squares[i].className="square";
+				// row2Squares가 선언된 부분은 <script> 괄호 안에 포함되어있으므로 이 함수에서도 사용할 수 있는 전역변수취급임.
+			}
+			this.className="square enabled";
+		}
+
+
 			var row1Squares = document.querySelectorAll('.row1 .square');
+							// 선택자를 인풋으로 받는 함수, 선택자랑 같은건 모두 배열로 돌려줌.
+							// All 빼면 맨위에있는거로
+			// row1Squares는 객체이므로 배경 바꾸려면 
+			// row1Squares.style.backgroundColor="red";
+
+			// 이벤트 중심적인 코드 -> 클릭도 이벤트로 지정. 모록은 javascript events라고 검색하면 나옴
+			// 예시 -> html에 직접 inline으로 작성 가능하긴 한데 js
+			// <button onclick='document.getElementById("demo").innerHTML=Date()'>The time is?</button>
 
 			for(var i = 0; i < row1Squares.length; i++) {
 				var node = row1Squares[i];
 				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+
+				node.addEventListener("click", changebackground);
 			}
 
 			var row2Squares = document.querySelectorAll('.row2 .square');
@@ -45,6 +78,7 @@
 			for(var i = 0; i < row2Squares.length; i++) {
 				var node = row2Squares[i];
 				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+				node.addEventListener("click", squareswitch);
 			}
 		</script>
 	</body>
